@@ -157,4 +157,4 @@ try:
  
 
 except ValueError:
-    print("Ops, você informou algo errado. Tente novamente")
+    print("Ops, você informou algo errado, pode ter sido letra ou número. Tente novamente")
