@@ -108,35 +108,41 @@ print("-"*30)
     
 
 try:
-    pergunta= int(input("Informe a opção: "))
 
-except ValueError:
-    print("Por favor, informe apenas o número da opção desejada")
+    while True:
+        pergunta= input("Deseja adiconar ou listar funcionarios (s/n)? ")
 
-try:
-    if pergunta== 1:
+        if pergunta=="s":
+            perguntaMenu= int(input("Informe a opção: "))
 
-        nome= input("Informe o NOME: ")
-        cpf= input("Informe o CPF: ")
-        bonus= bool("Informe se POSSUI BONUS (True/False): ")
-        v= float(input("Informe o VALOR da CARGA HORARIA: "))
-        c= int(input("Informe a CARGA HORARIA: "))
+        if perguntaMenu== 1:
 
-        usuario= FuncionarioHorista(cpf,nome,bonus,c,v)
+            nome= input("Informe o NOME: ")
+            cpf= input("Informe o CPF: ")
+            bonus= bool("Informe se POSSUI BONUS (True/False): ")
+            v= float(input("Informe o VALOR da CARGA HORARIA: "))
+            c= int(input("Informe a CARGA HORARIA: "))
 
-    if pergunta==2:
-        nome= input("Informe o NOME: ")
-        cpf= input("Informe CPF: ")
-        bonus= bool("Informe se POSSUI BÔNUS (True/False): ")
-        salario= float(input("Informe o SALARIO MENSAL: "))
+            usuario= FuncionarioHorista(cpf,nome,bonus,c,v)
 
-        usuario= FuncionarioCLT(cpf,nome,bonus,salario)
+        elif perguntaMenu==2:
+            nome= input("Informe o NOME: ")
+            cpf= input("Informe CPF: ")
+            bonus= bool("Informe se POSSUI BÔNUS (True/False): ")
+            salario= float(input("Informe o SALARIO MENSAL: "))
 
-    if pergunta==3:
-        print(FuncionarioCLT,FuncionarioHorista)
+            usuario= FuncionarioCLT(cpf,nome,bonus,salario)
 
+        elif perguntaMenu==3:
+            print(FuncionarioCLT,FuncionarioHorista)
 
+            continue
 
+        elif pergunta== "n":
+            break
+        print("Ate logo!")
 
+        
+    
 except Exception:
     print("Ocorreu um erro, para que não se repita, faça calmamente")
