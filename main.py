@@ -109,40 +109,53 @@ print("-"*30)
 
 try:
 
+    nomeFuncionarios=[]
+
     while True:
-        pergunta= input("Deseja adiconar ou listar funcionarios (s/n)? ")
 
-        if pergunta=="s":
-            perguntaMenu= int(input("Informe a opção: "))
+        pergunta= input("Deseja adicionar ou listar funcionarios (s/n)? ")
 
-        if perguntaMenu== 1:
+        print("-"*30)
 
-            nome= input("Informe o NOME: ")
-            cpf= input("Informe o CPF: ")
-            bonus= bool("Informe se POSSUI BONUS (True/False): ")
-            v= float(input("Informe o VALOR da CARGA HORARIA: "))
-            c= int(input("Informe a CARGA HORARIA: "))
+        if pergunta == "s":
+            perguntaMenu= int(input("Informe o número opção: "))
 
-            usuario= FuncionarioHorista(cpf,nome,bonus,c,v)
+            if perguntaMenu== 1:
 
-        elif perguntaMenu==2:
-            nome= input("Informe o NOME: ")
-            cpf= input("Informe CPF: ")
-            bonus= bool("Informe se POSSUI BÔNUS (True/False): ")
-            salario= float(input("Informe o SALARIO MENSAL: "))
+                nome= input("Informe o NOME: ")
+                cpf= int(input("Informe o CPF: "))
+                bonus= bool("Informe se POSSUI BONUS (True/False): ")
+                v= float(input("Informe o VALOR da CARGA HORARIA: "))
+                c= int(input("Informe a CARGA HORARIA: "))
+                print("-"*30)
 
-            usuario= FuncionarioCLT(cpf,nome,bonus,salario)
+                usuario= FuncionarioHorista(cpf,nome,bonus,c,v)
+                nomeFuncionarios.append(usuario.getnomeFuncionario())
 
-        elif perguntaMenu==3:
-            print(FuncionarioCLT,FuncionarioHorista)
+            elif perguntaMenu==2:
+                nome= input("Informe o NOME: ")
+                cpf= int(input("Informe CPF: "))
+                bonus= bool("Informe se POSSUI BÔNUS (True/False): ")
+                salario= float(input("Informe o SALARIO MENSAL: "))
+                print("-"*30)
 
-            continue
+                usuario= FuncionarioCLT(cpf,nome,bonus,salario)
+                nomeFuncionarios.append(usuario.getnomeFuncionario())
 
-        elif pergunta== "n":
+            elif perguntaMenu==3:
+                print(nomeFuncionarios)
+                print("-"*30)
+
+                continue
+
+        elif pergunta=="n":
             break
-        print("Ate logo!")
+    print("Ate logo!")
 
-        
-    
-except Exception:
-    print("Ocorreu um erro, para que não se repita, faça calmamente")
+ 
+
+except ValueError:
+    print("Ops, você informou algo errado. Tente novamente")
+
+
+
