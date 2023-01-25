@@ -111,11 +111,13 @@ try:
 
     nomeFuncionarios=[]
 
+    bonus=bool
+
     while True:
 
-        pergunta= input("Deseja adicionar ou listar funcionarios (s/n)? ")
+        pergunta= input("Deseja adicionar ou listar funcionarios (s/n)? ") #deveria dar erro se colocasse numero? ele apenas continua rodando
 
-        print("-"*30)
+        print("-"*20)
 
         if pergunta == "s":
             perguntaMenu= int(input("Informe o número opção: "))
@@ -124,10 +126,10 @@ try:
 
                 nome= input("Informe o NOME: ")
                 cpf= int(input("Informe o CPF: "))
-                bonus= bool("Informe se POSSUI BONUS (True/False): ")
+                bonus= bool(input("Informe se POSSUI BÔNUS (True/False): "))#ele deveria dar erro
                 v= float(input("Informe o VALOR da CARGA HORARIA: "))
                 c= int(input("Informe a CARGA HORARIA: "))
-                print("-"*30)
+                print("-"*20)
 
                 usuario= FuncionarioHorista(cpf,nome,bonus,c,v)
                 nomeFuncionarios.append(usuario.getnomeFuncionario())
@@ -135,15 +137,15 @@ try:
             elif perguntaMenu==2:
                 nome= input("Informe o NOME: ")
                 cpf= int(input("Informe CPF: "))
-                bonus= bool("Informe se POSSUI BÔNUS (True/False): ")
+                bonus= bool(input("Informe se POSSUI BÔNUS (True/False): ")) #ele deveria dar erro 
                 salario= float(input("Informe o SALARIO MENSAL: "))
-                print("-"*30)
+                print("-"*20)
 
                 usuario= FuncionarioCLT(cpf,nome,bonus,salario)
                 nomeFuncionarios.append(usuario.getnomeFuncionario())
 
             elif perguntaMenu==3:
-                print(nomeFuncionarios)
+                print(f"Nome de todos os funcionários da Empresa: {nomeFuncionarios}")
                 print("-"*30)
 
                 continue
@@ -156,6 +158,3 @@ try:
 
 except ValueError:
     print("Ops, você informou algo errado. Tente novamente")
-
-
-
