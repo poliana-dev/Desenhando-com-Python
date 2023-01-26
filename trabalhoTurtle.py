@@ -36,6 +36,16 @@ class minhaTartaruga(Turtle):
         self.right(73)
         self.circle(260,35)
 
+        #segunda parte do corpo
+        self.right(73)
+        self.circle(45,190)
+        self.right(85)
+        self.circle(150,130)
+
+        self.forward(60)
+
+        
+
 
         
 
