@@ -41,8 +41,29 @@ class minhaTartaruga(Turtle):
         self.circle(45,190)
         self.right(85)
         self.circle(150,130)
+        self.forward(70)
 
-        self.forward(60)
+        #organizando 
+        self.penup()
+        self.forward(40)
+        self.backward(170)
+        self.right(100)
+        self.setx(-115)
+        self.back(8)
+        self.left(10)
+        
+        for perninhas in range(2):
+            self.pendown()    
+            self.circle(50,130)
+            self.right(80)
+        
+            
+
+       
+            
+
+
+            
 
         
 
