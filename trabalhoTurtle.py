@@ -67,9 +67,60 @@ class minhaTartaruga(Turtle):
 
     def desenharMariaPoliana(self):
         self.penup()
-        self.goto(-400,-150)
+        self.goto(-600,200)
+        self.right(139)
+        self.pensize(3)
+
+        def m():
+            self.pendown()
+            self.forward(70)
+            self.back(70)
+            self.left(40)
+
+            for linha in range(2):
+                self.forward(40)
+                self.left(94)
+
+            self.left(132)
+            self.forward(70)
+        
+        def a():
+            self.pendown()
+            self.circle(20,400)
+            self.penup()
+            self.left(50)
+            self.forward(35)
+            self.right(90)
+            self.pendown()
+            self.back(35)
+            self.forward(40)
+
+        def r():
+            self.pendown()
+
+
+
+        m()
+        self.penup()
+        self.sety(145)
+        self.setx(-530)
+        
+        a()
+
+        self.penup()
+        self.setx(-520)
+
+        r()
+
+        
+        
+            
+            
+        
+
+
 
 
 poli= minhaTartaruga("green")
-
 poli.desenharSapo()
+poli.desenharMariaPoliana()
