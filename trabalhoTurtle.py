@@ -25,7 +25,7 @@ class minhaTartaruga(Turtle):
 
         #ajustando posicao
         self.penup()
-        self.goto(0,-100)
+        self.goto(400,-100)
         
         self.pendown()
 
@@ -46,35 +46,30 @@ class minhaTartaruga(Turtle):
         #organizando 
         self.penup()
         self.forward(40)
-        self.backward(170)
-        self.right(100)
-        self.setx(-115)
-        self.back(8)
-        self.left(10)
-        
-        for perninhas in range(2):
-            self.pendown()    
-            self.circle(50,130)
-            self.right(80)
-        
-            
+        self.setx(250)
+        self.sety(160)
 
-       
-            
+        for olhos in range(2):
+            self.color("black")
+            self.begin_fill()
+            self.circle(20,400)
+            self.end_fill()
+            self.penup()
+            self.right(40)
+            self.forward(220)
 
-
-            
-
-        
+        self.back(385)
+        self.color("green")
+        self.pendown()
+        self.right(50)
+        self.circle(40,100)
 
 
-        
-
-        
-
-        
-
+    def desenharMariaPoliana(self):
+        self.penup()
+        self.goto(-400,-150)
 
 
 poli= minhaTartaruga("green")
+
 poli.desenharSapo()
