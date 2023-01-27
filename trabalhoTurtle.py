@@ -97,20 +97,39 @@ class minhaTartaruga(Turtle):
 
         def r():
             self.pendown()
+            self.back(45)
+            self.forward(20)
+            self.circle(13,-150)
+
+        def i():
+            self.pendown()
+            self.fd(8)
+            self.back(40)
 
 
-
+        
         m()
         self.penup()
         self.sety(145)
         self.setx(-530)
+        a()
+        self.penup()
+        self.setx(-470)
+        r()
+        self.penup()
+        self.setx(-430)
+        self.rt(30)
+        i()
+        self.up()
+        self.setx(-410)
+        self.sety(146)
+        self.right(180)
         
         a()
 
-        self.penup()
-        self.setx(-520)
 
-        r()
+
+    
 
         
         
