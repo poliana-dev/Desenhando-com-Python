@@ -1,6 +1,7 @@
 from turtle import Turtle
 
 
+
 class minhaTartaruga(Turtle):
     __nome = " Maria Poliana"
     __matricula= "20211181110016"
@@ -178,6 +179,51 @@ class minhaTartaruga(Turtle):
         self.sety(140)
         a()
 
+    def desenharMatricula(self):
+        self.up()
+        self.goto(-600,30)
+
+        def dois():
+            self.down()
+            self.circle(25,-200)
+            self.right(200)
+            self.fd(70)
+            self.rt(50)
+            self.bk(50)
+
+        def zero():
+            self.down()
+            for zero in range(2):
+                self.fd(35)
+                self.circle(20,200)
+                self.rt(20)
+
+        def um():
+            self.down()
+            self.circle(20,100)
+            self.back(80)
+                
+        
+
+
+        dois()
+        self.up()
+        self.setx(-530)
+        self.sety(20)
+        self.left(90)
+        zero()
+        self.up()
+        self.setx(-470)
+        self.sety(30)
+        
+        dois()
+        self.up()
+        self.setx(-390)
+        self.sety(30)
+        self.right(190)
+        um()
+        self.up()
+        self.setx(-300)
 
 
     
@@ -186,3 +232,5 @@ class minhaTartaruga(Turtle):
 poli= minhaTartaruga("green")
 poli.desenharSapo()
 poli.desenharMariaPoliana()
+poli.desenharMatricula()
+
