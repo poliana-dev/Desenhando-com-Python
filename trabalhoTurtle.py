@@ -106,8 +106,32 @@ class minhaTartaruga(Turtle):
             self.fd(8)
             self.back(40)
 
+        def p():
+            self.pendown()
+            self.back(70)
+            self.forward(20)
+            self.circle(23,400)
 
+        def o():
+            self.down()
+            self.circle(20,400)
+
+        def l():
+            self.down()
+            self.fd(65)
+
+        def n():
+            self.down()
+            self.back(50)
+            self.forward(20)
+            self.circle(13,-160)
+            self.rt(200)
+            self.fd(36)
         
+
+
+            
+        #escrevendo na tela        
         m()
         self.penup()
         self.sety(145)
@@ -124,20 +148,39 @@ class minhaTartaruga(Turtle):
         self.setx(-410)
         self.sety(146)
         self.right(180)
-        
+        a()
+        self.up()
+        self.setx(-300)
+
+        p()
+        self.up()
+        self.setx(-250)
+        self.sety(131)
+        o()
+        self.up()
+        self.setx(-200)
+        self.lt(100)
+        l()
+        self.up()
+        self.setx(-180)
+        self.sety(155)
+        i()
+        self.up()
+        self.setx(-160)
+        self.sety(140)
+        self.rt(180)
+        a()
+        self.up()
+        self.setx(-100)
+        n()
+        self.up()
+        self.setx(-60)
+        self.sety(140)
         a()
 
 
 
     
-
-        
-        
-            
-            
-        
-
-
 
 
 poli= minhaTartaruga("green")
