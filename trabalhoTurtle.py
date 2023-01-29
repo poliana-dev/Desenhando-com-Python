@@ -205,7 +205,8 @@ class minhaTartaruga(Turtle):
         
         def seis():
             self.down()
-            self.circle(20,-200)
+            
+            self.circle(-20,400)
             self.fd(60)
 
         def oito():
@@ -244,7 +245,7 @@ class minhaTartaruga(Turtle):
         um()
         self.up()
         self.setx(-220)
-        self.sety(4)
+        self.sety(3)
         self.right(85)
         oito()
         self.up()
@@ -263,13 +264,24 @@ class minhaTartaruga(Turtle):
         self.right(99)
         um()
         self.up()
-        self.setx(-5)
-        self.sety(-2)
+        self.setx(-9)
+        self.sety(-3)
         zero()
         self.up()
         self.setx(40)
-        self.sety(-2)
+        self.sety(-3)
         zero()
+        self.up()
+        self.setx(60)
+        self.sety(30)
+        self.right(102)
+        um()
+        self.up()
+        self.setx(100)
+        self.sety(-24)
+        self.rt(-30)
+        seis()
+
         
         
 
