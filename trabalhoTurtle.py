@@ -281,17 +281,3 @@ class minhaTartaruga(Turtle):
         self.sety(-24)
         self.rt(-30)
         seis()
-
-        
-        
-
-
-
-    
-
-
-poli= minhaTartaruga("green")
-poli.desenharSapo()
-poli.desenharMariaPoliana()
-poli.desenharMatricula()
-
