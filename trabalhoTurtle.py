@@ -1,7 +1,5 @@
 from turtle import Turtle
 
-
-
 class minhaTartaruga(Turtle):
     __nome = " Maria Poliana"
     __matricula= "20211181110016"
@@ -281,3 +279,7 @@ class minhaTartaruga(Turtle):
         self.sety(-24)
         self.rt(-30)
         seis()
+
+
+poli=minhaTartaruga("red")
+poli.desenharSapo()
